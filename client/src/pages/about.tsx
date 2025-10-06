@@ -41,7 +41,7 @@ export default function About() {
               <img
                 src={aboutImages.workshop}
                 alt="Master tailor working with colorful African fabrics in Nairobi workshop"
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover"
                 data-testid="img-workshop-story"
               />
               
