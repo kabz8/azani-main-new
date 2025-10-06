@@ -45,43 +45,43 @@ export function Footer() {
               <Link href="/ready-shop" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-ready">
                 Ready to Wear
               </Link>
-              <a href="#" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-prints">
+              <Link href="/ready-shop" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-prints">
                 African Prints
-              </a>
-              <a href="#" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-suits">
+              </Link>
+              <Link href="/ready-shop" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-suits">
                 Suits & Blazers
-              </a>
-              <a href="#" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-traditional">
+              </Link>
+              <Link href="/ready-shop" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-traditional">
                 Traditional Wear
-              </a>
+              </Link>
             </div>
           </div>
           
           <div>
             <h4 className="font-semibold text-background mb-4">Support</h4>
             <div className="space-y-2">
-              <a href="#" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-size-guide">
+              <Link href="/contact" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-size-guide">
                 Size Guide
-              </a>
-              <a href="#" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-returns">
+              </Link>
+              <Link href="/contact" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-returns">
                 Returns
-              </a>
-              <a href="#" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-care">
+              </Link>
+              <Link href="/contact" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-care">
                 Care Instructions
-              </a>
-              <a href="#" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-faq">
+              </Link>
+              <Link href="/contact" className="block text-background/80 hover:text-background smooth-hover" data-testid="link-footer-faq">
                 FAQ
-              </a>
+              </Link>
             </div>
           </div>
           
           <div>
             <h4 className="font-semibold text-background mb-4">Contact</h4>
             <div className="space-y-2 text-background/80">
-              <p data-testid="text-footer-address">Lumumba Drive Roysambu</p>
+              <Link href="/contact" className="block hover:text-background smooth-hover" data-testid="text-footer-address">Lumumba Drive Roysambu</Link>
               <p data-testid="text-footer-country">Nairobi, Kenya</p>
-              <p data-testid="text-footer-phone">+254 755 537 861</p>
-              <p data-testid="text-footer-email">hello@azaniafrica.com</p>
+              <a href="tel:+254755537861" className="block hover:text-background smooth-hover" data-testid="text-footer-phone">+254 755 537 861</a>
+              <a href="mailto:hello@azaniafrica.com" className="block hover:text-background smooth-hover" data-testid="text-footer-email">hello@azaniafrica.com</a>
             </div>
           </div>
         </div>
@@ -91,15 +91,15 @@ export function Footer() {
             &copy; 2025 Azani. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-background/60 hover:text-background text-sm smooth-hover" data-testid="link-footer-privacy">
+            <Link href="/contact" className="text-background/60 hover:text-background text-sm smooth-hover" data-testid="link-footer-privacy">
               Privacy Policy
-            </a>
-            <a href="#" className="text-background/60 hover:text-background text-sm smooth-hover" data-testid="link-footer-terms">
+            </Link>
+            <Link href="/contact" className="text-background/60 hover:text-background text-sm smooth-hover" data-testid="link-footer-terms">
               Terms of Service
-            </a>
-            <a href="#" className="text-background/60 hover:text-background text-sm smooth-hover" data-testid="link-footer-cookies">
+            </Link>
+            <Link href="/contact" className="text-background/60 hover:text-background text-sm smooth-hover" data-testid="link-footer-cookies">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
