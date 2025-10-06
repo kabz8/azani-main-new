@@ -33,7 +33,7 @@
   --sidebar-border: hsl(20 5.9% 90%);
   --sidebar-ring: hsl(24 95% 53%);
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: 'DM Sans', system-ui, sans-serif;
   --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, 'Consolas', 'DejaVu Sans Mono', monospace;
   --radius: 0.75rem;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
