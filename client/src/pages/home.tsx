@@ -32,16 +32,19 @@ export default function Home() {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
             {/* Title and Description - Order 1 on mobile and desktop */}
-            <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 fade-in-up">
-              <h1 className="text-4xl sm:text-5xl lg:text-8xl font-playfair font-bold leading-tight lg:leading-none luxury-text" data-testid="text-hero-title">
+            <div className="space-y-3 sm:space-y-6 lg:space-y-8 order-1 fade-in-up bg-white lg:bg-transparent px-6 py-6 lg:px-0 lg:py-0 rounded-2xl lg:rounded-none shadow-[0_10px_30px_-15px_rgba(0,0,0,0.15)] lg:shadow-none border border-primary/10 lg:border-0">
+              <h1 className="text-4xl sm:text-5xl lg:text-8xl font-playfair font-extrabold leading-tight lg:leading-none tracking-tight luxury-text" data-testid="text-hero-title">
                 <span className="block text-foreground">Azani Africa</span>
               </h1>
               
-              <p className="text-base sm:text-lg lg:text-2xl text-primary font-light italic leading-relaxed max-w-xl tracking-wide" data-testid="text-hero-tagline">
-                We customize outfits with a touch of ankara
-              </p>
+              <div className="space-y-3">
+                <p className="text-lg sm:text-xl lg:text-2xl text-primary font-semibold uppercase tracking-[0.15em] leading-relaxed" data-testid="text-hero-tagline">
+                  We customize outfits with a touch of ankara
+                </p>
+                <div className="h-[2px] w-20 bg-gradient-to-r from-primary to-primary/40"></div>
+              </div>
               
-              <p className="text-base sm:text-lg lg:text-2xl text-muted-foreground leading-relaxed max-w-xl font-light" data-testid="text-hero-description">
+              <p className="text-base sm:text-lg lg:text-2xl text-muted-foreground/90 leading-relaxed max-w-xl" data-testid="text-hero-description">
                 Where traditional African artistry meets contemporary luxury. Each piece tells a story of heritage, crafted with precision in the heart of Kenya.
               </p>
             </div>

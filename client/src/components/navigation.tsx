@@ -25,10 +25,10 @@ export function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 border-b bg-white ${
       isScrolled 
-        ? 'glass-effect shadow-lg py-3 sm:py-4' 
-        : 'bg-transparent py-4 sm:py-6'
+        ? 'shadow-lg py-3 sm:py-4 border-border/30' 
+        : 'py-4 sm:py-6 border-border/20 shadow-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
