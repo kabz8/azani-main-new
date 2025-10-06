@@ -138,10 +138,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-6xl font-serif font-bold text-foreground luxury-text mb-6">
-              Why Choose Us
+              What We Do
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-              Quality craftsmanship meets African heritage
+              Making quality African wear in Nairobi since 2008
             </p>
           </div>
           
@@ -150,9 +150,9 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors duration-300">
                 <Award className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground">Expert Tailoring</h3>
+              <h3 className="text-2xl font-serif font-bold text-foreground">Handmade in Nairobi</h3>
               <p className="text-muted-foreground leading-relaxed font-light">
-                Over 15 years of experience creating custom pieces in Nairobi
+                Every piece is cut and sewn by our tailors in our workshop
               </p>
             </div>
             
@@ -160,9 +160,9 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors duration-300">
                 <Sparkles className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground">Authentic Fabrics</h3>
+              <h3 className="text-2xl font-serif font-bold text-foreground">Real African Fabric</h3>
               <p className="text-muted-foreground leading-relaxed font-light">
-                We work with local artisans to source genuine African materials
+                Ankara, Kitenge, and other fabrics sourced from Kenya and West Africa
               </p>
             </div>
             
@@ -170,9 +170,9 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors duration-300">
                 <Users className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground">Made for You</h3>
+              <h3 className="text-2xl font-serif font-bold text-foreground">Custom or Ready-Made</h3>
               <p className="text-muted-foreground leading-relaxed font-light">
-                Custom measurements and designs tailored to your style
+                Shop our collection or order something made just for you
               </p>
             </div>
           </div>
