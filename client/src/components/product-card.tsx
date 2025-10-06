@@ -20,7 +20,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div className="group relative" data-testid={`card-product-${product.id}`}>
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-muted/30 to-muted/60 backdrop-blur-sm">
+      <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-muted/30 to-muted/60 backdrop-blur-sm">
         {/* Image Container */}
         <div className="relative aspect-[4/5] overflow-hidden">
           <img
@@ -36,11 +36,11 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Favorite Button */}
           <button
             onClick={() => setIsFavorited(!isFavorited)}
-            className="absolute top-4 right-4 w-11 h-11 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 w-10 h-10 sm:w-11 sm:h-11 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 touch-manipulation"
             data-testid={`button-favorite-${product.id}`}
           >
             <Heart
-              className={`h-5 w-5 transition-colors ${
+              className={`h-4 w-4 sm:h-5 sm:w-5 transition-colors ${
                 isFavorited ? 'text-red-500 fill-red-500' : 'text-gray-600 hover:text-red-500'
               }`}
             />
@@ -48,17 +48,17 @@ export function ProductCard({ product }: ProductCardProps) {
           
           {/* Featured Badge */}
           {product.featured === 'true' && (
-            <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+            <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-primary text-primary-foreground px-2.5 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-semibold shadow-lg">
               <Star className="w-3 h-3 inline mr-1 fill-current" />
               Featured
             </div>
           )}
           
           {/* Quick View Button - Appears on Hover */}
-          <div className="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
+          <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
             <button 
               onClick={() => setShowDialog(true)}
-              className="w-full bg-white text-foreground py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 backdrop-blur-sm"
+              className="w-full bg-white text-foreground py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 backdrop-blur-sm touch-manipulation"
               data-testid={`button-quickview-${product.id}`}
             >
               Quick View
@@ -67,19 +67,19 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         
         {/* Product Info */}
-        <div className="p-6 space-y-4 bg-white/80 backdrop-blur-sm">
-          <div className="space-y-2">
-            <h3 className="font-serif font-bold text-xl text-foreground group-hover:text-primary transition-colors" data-testid={`text-product-name-${product.id}`}>
+        <div className="p-4 sm:p-6 space-y-3 sm:space-y-4 bg-white/80 backdrop-blur-sm">
+          <div className="space-y-1.5 sm:space-y-2">
+            <h3 className="font-serif font-bold text-lg sm:text-xl text-foreground group-hover:text-primary transition-colors" data-testid={`text-product-name-${product.id}`}>
               {product.name}
             </h3>
-            <p className="text-muted-foreground leading-relaxed" data-testid={`text-product-description-${product.id}`}>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed line-clamp-2" data-testid={`text-product-description-${product.id}`}>
               {product.description}
             </p>
           </div>
           
           <div className="flex items-center justify-between">
-            <div className="space-y-1">
-              <div className="text-2xl font-bold text-foreground" data-testid={`text-product-price-${product.id}`}>
+            <div className="space-y-0.5 sm:space-y-1">
+              <div className="text-xl sm:text-2xl font-bold text-foreground" data-testid={`text-product-price-${product.id}`}>
                 {formattedPrice}
               </div>
               {product.type === 'custom' && (
