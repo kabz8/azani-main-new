@@ -34,11 +34,6 @@ export default function Home() {
             {/* Left Column - Content */}
             <div className="space-y-12 fade-in-up">
               <div className="space-y-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full shadow-lg backdrop-blur-sm border border-white/20">
-                  <Sparkles className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Authentic African Couture</span>
-                </div>
-                
                 <h1 className="text-6xl lg:text-8xl font-playfair font-bold leading-none luxury-text" data-testid="text-hero-title">
                   <span className="block text-foreground">Azani Africa</span>
                 </h1>
