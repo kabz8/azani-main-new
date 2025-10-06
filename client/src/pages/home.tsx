@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles, Globe, Award, Users, ShoppingBag } from "lucide-r
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import type { Product } from "@shared/schema";
+import heroImage from "@assets/WhatsApp Image 2025-09-06 at 23.36.35 (1)_1759747415275.jpeg";
 
 export default function Home() {
   const { data: products, isLoading } = useQuery<Product[]>({
@@ -86,7 +87,7 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000"
+                  src={heroImage}
                   alt="Elegant African fashion model in traditional wear"
                   className="relative rounded-3xl shadow-2xl w-full h-auto object-cover luxury-hover"
                   data-testid="img-hero-model"
