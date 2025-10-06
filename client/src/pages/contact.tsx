@@ -64,73 +64,73 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-muted to-background" data-testid="section-contact-hero">
+      <section className="pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-20 bg-gradient-to-b from-muted to-background" data-testid="section-contact-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-serif font-bold text-foreground mb-6" data-testid="text-contact-title">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4 sm:mb-6" data-testid="text-contact-title">
             Get In Touch
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-contact-description">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-contact-description">
             Ready to start your custom order or have questions? We'd love to hear from you and help bring your vision to life.
           </p>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 bg-background" data-testid="section-contact-content">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background" data-testid="section-contact-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <h2 className="text-3xl font-serif font-bold text-foreground mb-8" data-testid="text-contact-info-title">
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-6 sm:mb-8" data-testid="text-contact-info-title">
                   Contact Information
                 </h2>
                 
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4" data-testid="contact-address">
-                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-5 w-5 text-primary" />
+                <div className="space-y-5 sm:space-y-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4" data-testid="contact-address">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Visit Our Studio</h3>
-                      <p className="text-muted-foreground">
+                      <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Visit Our Studio</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         Lumumba Drive Roysambu<br />
                         Nairobi, Kenya
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4" data-testid="contact-phone">
-                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-5 w-5 text-primary" />
+                  <div className="flex items-start space-x-3 sm:space-x-4" data-testid="contact-phone">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
-                      <p className="text-muted-foreground">
+                      <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Call Us</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         +254 755 537 861
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4" data-testid="contact-email">
-                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-5 w-5 text-primary" />
+                  <div className="flex items-start space-x-3 sm:space-x-4" data-testid="contact-email">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                      <p className="text-muted-foreground">
+                      <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Email Us</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         hello@azaniafrica.com
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4" data-testid="contact-hours">
-                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-5 w-5 text-primary" />
+                  <div className="flex items-start space-x-3 sm:space-x-4" data-testid="contact-hours">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Business Hours</h3>
-                      <p className="text-muted-foreground">
+                      <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Business Hours</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         Mon - Fri: 9:00 AM - 6:00 PM<br />
                         Sat: 10:00 AM - 4:00 PM
                       </p>
@@ -140,35 +140,35 @@ export default function Contact() {
               </div>
               
               <div>
-                <h3 className="font-semibold text-foreground mb-4" data-testid="text-social-title">Follow Us</h3>
-                <div className="flex space-x-4">
+                <h3 className="font-semibold text-foreground mb-4 text-sm sm:text-base" data-testid="text-social-title">Follow Us</h3>
+                <div className="flex space-x-3 sm:space-x-4">
                   <a
                     href="#"
-                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
+                    className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover touch-manipulation"
                     data-testid="link-social-instagram"
                   >
-                    <Instagram className="h-4 w-4" />
+                    <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
+                    className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover touch-manipulation"
                     data-testid="link-social-facebook"
                   >
-                    <Facebook className="h-4 w-4" />
+                    <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
+                    className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover touch-manipulation"
                     data-testid="link-social-twitter"
                   >
-                    <Twitter className="h-4 w-4" />
+                    <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
+                    className="w-11 h-11 sm:w-12 sm:h-12 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover touch-manipulation"
                     data-testid="link-social-linkedin"
                   >
-                    <Linkedin className="h-4 w-4" />
+                    <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                 </div>
               </div>
@@ -177,7 +177,7 @@ export default function Contact() {
             {/* Contact Form */}
             <Card data-testid="card-contact-form">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif">Send us a Message</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl font-serif">Send us a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <Form {...form}>
@@ -271,7 +271,7 @@ export default function Contact() {
                     
                     <Button
                       type="submit"
-                      className="w-full py-4 text-lg"
+                      className="w-full py-4 sm:py-5 text-base sm:text-lg touch-manipulation"
                       disabled={isSubmitting}
                       data-testid="button-send-message"
                     >
