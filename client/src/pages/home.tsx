@@ -75,7 +75,7 @@ export default function Home() {
                   <div className="text-sm text-muted-foreground font-medium">Countries</div>
                 </div>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-experience">15+</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-experience">10+</div>
                   <div className="text-sm text-muted-foreground font-medium">Years</div>
                 </div>
               </div>
