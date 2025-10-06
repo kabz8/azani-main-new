@@ -135,7 +135,7 @@ export default function Home() {
               What We Do
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-              Making quality African wear in Nairobi since 2008
+              Making quality African wear in Nairobi since 2015
             </p>
           </div>
           
