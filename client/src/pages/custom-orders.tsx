@@ -95,24 +95,24 @@ export default function CustomOrders() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <Ruler className="h-8 w-8 text-primary-foreground" />
+              <div className="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
+                <Ruler className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground" data-testid="text-process-measurements">Precise Measurements</h3>
               <p className="text-muted-foreground">Detailed measurement guide ensures perfect fit every time</p>
             </div>
             
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto">
-                <Palette className="h-8 w-8 text-secondary-foreground" />
+              <div className="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
+                <Palette className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground" data-testid="text-process-fabric">Fabric Selection</h3>
               <p className="text-muted-foreground">Choose from premium African prints and luxury materials</p>
             </div>
             
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto">
-                <Truck className="h-8 w-8 text-accent-foreground" />
+              <div className="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
+                <Truck className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground" data-testid="text-process-delivery">Global Delivery</h3>
               <p className="text-muted-foreground">Worldwide shipping with tracking and insurance</p>

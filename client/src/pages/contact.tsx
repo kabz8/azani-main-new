@@ -88,8 +88,8 @@ export default function Contact() {
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4" data-testid="contact-address">
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-primary-foreground" />
+                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Visit Our Studio</h3>
@@ -101,8 +101,8 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start space-x-4" data-testid="contact-phone">
-                    <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-6 w-6 text-secondary-foreground" />
+                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
@@ -113,8 +113,8 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start space-x-4" data-testid="contact-email">
-                    <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6 text-accent-foreground" />
+                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
@@ -125,8 +125,8 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start space-x-4" data-testid="contact-hours">
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-6 w-6 text-primary-foreground" />
+                    <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Business Hours</h3>
@@ -144,31 +144,31 @@ export default function Contact() {
                 <div className="flex space-x-4">
                   <a
                     href="#"
-                    className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground hover:bg-primary/90 smooth-hover"
+                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
                     data-testid="link-social-instagram"
                   >
-                    <Instagram className="h-5 w-5" />
+                    <Instagram className="h-4 w-4" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground hover:bg-secondary/90 smooth-hover"
+                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
                     data-testid="link-social-facebook"
                   >
-                    <Facebook className="h-5 w-5" />
+                    <Facebook className="h-4 w-4" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-accent-foreground hover:bg-accent/90 smooth-hover"
+                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
                     data-testid="link-social-twitter"
                   >
-                    <Twitter className="h-5 w-5" />
+                    <Twitter className="h-4 w-4" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-muted/90 smooth-hover"
+                    className="w-10 h-10 border-2 border-primary rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all smooth-hover"
                     data-testid="link-social-linkedin"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-4 w-4" />
                   </a>
                 </div>
               </div>
