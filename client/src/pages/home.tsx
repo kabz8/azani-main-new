@@ -27,10 +27,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Completely Redesigned */}
-      <section className="relative min-h-screen flex items-center luxury-gradient overflow-hidden" data-testid="section-hero">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-primary/5"></div>
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative pt-20 pb-16 md:pt-24 md:pb-20" data-testid="section-hero">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left Column - Content */}
             <div className="space-y-12 fade-in-up">
