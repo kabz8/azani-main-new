@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type Product, type InsertProduct, type CustomOrder, type InsertCustomOrder, type Contact, type InsertContact } from "@shared/schema";
+import { type User, type InsertUser, type Product, type InsertProduct, type UpdateProduct, type CustomOrder, type InsertCustomOrder, type UpdateCustomOrder, type Contact, type InsertContact } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -10,13 +10,25 @@ export interface IStorage {
   getProductsByCategory(category: string): Promise<Product[]>;
   getProduct(id: string): Promise<Product | undefined>;
   createProduct(product: InsertProduct): Promise<Product>;
+  updateProduct(id: string, updates: UpdateProduct): Promise<Product | undefined>;
+  deleteProduct(id: string): Promise<boolean>;
   
   getCustomOrders(): Promise<CustomOrder[]>;
   getCustomOrder(id: string): Promise<CustomOrder | undefined>;
   createCustomOrder(order: InsertCustomOrder): Promise<CustomOrder>;
+  updateCustomOrder(id: string, updates: UpdateCustomOrder): Promise<CustomOrder | undefined>;
   
   getContacts(): Promise<Contact[]>;
   createContact(contact: InsertContact): Promise<Contact>;
+  
+  getAnalytics(): Promise<{
+    totalProducts: number;
+    totalOrders: number;
+    pendingOrders: number;
+    inProgressOrders: number;
+    completedOrders: number;
+    totalContacts: number;
+  }>;
 }
 
 export class MemStorage implements IStorage {
@@ -110,7 +122,7 @@ export class MemStorage implements IStorage {
 
   async createUser(insertUser: InsertUser): Promise<User> {
     const id = randomUUID();
-    const user: User = { ...insertUser, id };
+    const user: User = { ...insertUser, id, isAdmin: 'false' };
     this.users.set(id, user);
     return user;
   }
@@ -180,6 +192,47 @@ export class MemStorage implements IStorage {
     };
     this.contacts.set(id, contact);
     return contact;
+  }
+
+  async updateProduct(id: string, updates: UpdateProduct): Promise<Product | undefined> {
+    const product = this.products.get(id);
+    if (!product) return undefined;
+    
+    const updatedProduct: Product = { ...product, ...updates };
+    this.products.set(id, updatedProduct);
+    return updatedProduct;
+  }
+
+  async deleteProduct(id: string): Promise<boolean> {
+    return this.products.delete(id);
+  }
+
+  async updateCustomOrder(id: string, updates: UpdateCustomOrder): Promise<CustomOrder | undefined> {
+    const order = this.customOrders.get(id);
+    if (!order) return undefined;
+    
+    const updatedOrder: CustomOrder = { ...order, ...updates };
+    this.customOrders.set(id, updatedOrder);
+    return updatedOrder;
+  }
+
+  async getAnalytics(): Promise<{
+    totalProducts: number;
+    totalOrders: number;
+    pendingOrders: number;
+    inProgressOrders: number;
+    completedOrders: number;
+    totalContacts: number;
+  }> {
+    const orders = Array.from(this.customOrders.values());
+    return {
+      totalProducts: this.products.size,
+      totalOrders: this.customOrders.size,
+      pendingOrders: orders.filter(o => o.status === 'pending').length,
+      inProgressOrders: orders.filter(o => o.status === 'in-progress').length,
+      completedOrders: orders.filter(o => o.status === 'completed').length,
+      totalContacts: this.contacts.size,
+    };
   }
 }
 

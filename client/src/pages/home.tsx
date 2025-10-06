@@ -29,59 +29,58 @@ export default function Home() {
       {/* Hero Section - Completely Redesigned */}
       <section className="relative pt-24 pb-12 md:pt-28 md:pb-16" data-testid="section-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
-            {/* Left Column - Content */}
-            <div className="space-y-8 lg:space-y-12 fade-in-up">
-              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-                <h1 className="text-4xl sm:text-5xl lg:text-8xl font-playfair font-bold leading-tight lg:leading-none luxury-text" data-testid="text-hero-title">
-                  <span className="block text-foreground">Azani Africa</span>
-                </h1>
-                
-                <p className="text-base sm:text-lg lg:text-2xl text-primary font-light italic leading-relaxed max-w-xl tracking-wide" data-testid="text-hero-tagline">
-                  We customize outfits with a touch of ankara
-                </p>
-                
-                <p className="text-base sm:text-lg lg:text-2xl text-muted-foreground leading-relaxed max-w-xl font-light" data-testid="text-hero-description">
-                  Where traditional African artistry meets contemporary luxury. Each piece tells a story of heritage, crafted with precision in the heart of Kenya.
-                </p>
-              </div>
+            {/* Title and Description - Order 1 on mobile and desktop */}
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 fade-in-up">
+              <h1 className="text-4xl sm:text-5xl lg:text-8xl font-playfair font-bold leading-tight lg:leading-none luxury-text" data-testid="text-hero-title">
+                <span className="block text-foreground">Azani Africa</span>
+              </h1>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/custom-orders" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 rounded-xl font-semibold text-base sm:text-lg shadow-xl luxury-hover" data-testid="button-hero-custom">
-                    Start Custom Order
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-                <Link href="/ready-shop" className="w-full sm:w-auto">
-                  <Button variant="outline" size="lg" className="w-full group border-2 border-foreground/20 hover:border-primary text-foreground hover:text-primary px-6 sm:px-8 py-4 rounded-xl font-semibold text-base sm:text-lg backdrop-blur-sm bg-white/60 luxury-hover" data-testid="button-hero-collections">
-                    View Collections
-                    <ShoppingBag className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
+              <p className="text-base sm:text-lg lg:text-2xl text-primary font-light italic leading-relaxed max-w-xl tracking-wide" data-testid="text-hero-tagline">
+                We customize outfits with a touch of ankara
+              </p>
               
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 sm:pt-8 border-t border-foreground/10">
-                <div className="text-center space-y-1 sm:space-y-2">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-pieces">500+</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground font-medium">Custom Pieces</div>
-                </div>
-                <div className="text-center space-y-1 sm:space-y-2">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-countries">50+</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground font-medium">Countries</div>
-                </div>
-                <div className="text-center space-y-1 sm:space-y-2">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-experience">10+</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground font-medium">Years</div>
-                </div>
-              </div>
+              <p className="text-base sm:text-lg lg:text-2xl text-muted-foreground leading-relaxed max-w-xl font-light" data-testid="text-hero-description">
+                Where traditional African artistry meets contemporary luxury. Each piece tells a story of heritage, crafted with precision in the heart of Kenya.
+              </p>
             </div>
             
-            {/* Right Column - Hero Carousel */}
-            <div className="relative">
+            {/* Carousel - Order 2 on mobile, but in right column on desktop */}
+            <div className="relative order-2 w-full">
               <HeroCarousel />
+            </div>
+
+            {/* Buttons - Order 3 on mobile, part of left column on desktop */}
+            <div className="flex flex-col sm:flex-row gap-4 order-3 lg:order-1 w-full">
+              <Link href="/custom-orders" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 rounded-xl font-semibold text-base sm:text-lg shadow-xl luxury-hover" data-testid="button-hero-custom">
+                  Start Custom Order
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/ready-shop" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full group border-2 border-foreground/20 hover:border-primary text-foreground hover:text-primary px-6 sm:px-8 py-4 rounded-xl font-semibold text-base sm:text-lg backdrop-blur-sm bg-white/60 luxury-hover" data-testid="button-hero-collections">
+                  View Collections
+                  <ShoppingBag className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+            
+            {/* Stats - Order 4 on mobile, part of left column on desktop */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 sm:pt-8 border-t border-foreground/10 order-4 lg:order-1 w-full">
+              <div className="text-center space-y-1 sm:space-y-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-pieces">500+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-medium">Custom Pieces</div>
+              </div>
+              <div className="text-center space-y-1 sm:space-y-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-countries">50+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-medium">Countries</div>
+              </div>
+              <div className="text-center space-y-1 sm:space-y-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-experience">10+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-medium">Years</div>
+              </div>
             </div>
           </div>
         </div>

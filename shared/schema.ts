@@ -7,6 +7,7 @@ export const users = pgTable("users", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   username: text("username").notNull().unique(),
   password: text("password").notNull(),
+  isAdmin: text("is_admin").default('false'),
 });
 
 export const products = pgTable("products", {
@@ -57,11 +58,21 @@ export const insertProductSchema = createInsertSchema(products).omit({
   createdAt: true,
 });
 
+export const updateProductSchema = createInsertSchema(products).omit({
+  id: true,
+  createdAt: true,
+}).partial();
+
 export const insertCustomOrderSchema = createInsertSchema(customOrders).omit({
   id: true,
   createdAt: true,
   status: true,
   estimatedPrice: true,
+});
+
+export const updateCustomOrderSchema = z.object({
+  status: z.enum(['pending', 'in-progress', 'completed']).optional(),
+  estimatedPrice: z.number().int().positive().optional(),
 });
 
 export const insertContactSchema = createInsertSchema(contacts).omit({
@@ -73,7 +84,9 @@ export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type Product = typeof products.$inferSelect;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
+export type UpdateProduct = z.infer<typeof updateProductSchema>;
 export type CustomOrder = typeof customOrders.$inferSelect;
 export type InsertCustomOrder = z.infer<typeof insertCustomOrderSchema>;
+export type UpdateCustomOrder = z.infer<typeof updateCustomOrderSchema>;
 export type Contact = typeof contacts.$inferSelect;
 export type InsertContact = z.infer<typeof insertContactSchema>;
