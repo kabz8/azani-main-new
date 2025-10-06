@@ -43,7 +43,7 @@ export default function Home() {
                   <span className="block text-foreground">Azani Africa</span>
                 </h1>
                 
-                <p className="text-2xl lg:text-3xl text-primary font-semibold leading-relaxed max-w-xl" data-testid="text-hero-tagline">
+                <p className="text-xl lg:text-2xl text-primary font-light italic leading-relaxed max-w-xl tracking-wide" data-testid="text-hero-tagline">
                   We customize outfits with a touch of ankara
                 </p>
                 
