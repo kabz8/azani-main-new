@@ -27,14 +27,14 @@ export function Navigation() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'glass-effect shadow-lg py-4' 
-        : 'bg-transparent py-6'
+        ? 'glass-effect shadow-lg py-3 sm:py-4' 
+        : 'bg-transparent py-4 sm:py-6'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group" data-testid="link-home">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary">Azani</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary">Azani</h1>
           </Link>
           
           {/* Desktop Navigation */}
@@ -59,11 +59,11 @@ export function Navigation() {
           </div>
           
           {/* Right Side - Currency & Cart */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-3 sm:space-x-6">
             <CurrencyToggle />
             
-            <button className="relative group p-2" data-testid="button-cart">
-              <ShoppingBag className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
+            <button className="relative group p-2 touch-manipulation" data-testid="button-cart">
+              <ShoppingBag className="h-5 w-5 sm:h-6 sm:w-6 text-foreground group-hover:text-primary transition-colors" />
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-xs font-bold text-primary-foreground">0</span>
               </div>
@@ -71,7 +71,7 @@ export function Navigation() {
             
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="lg:hidden p-2 text-foreground hover:text-primary transition-colors touch-manipulation"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
