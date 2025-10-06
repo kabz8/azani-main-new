@@ -170,3 +170,7 @@
 .stagger-animation {
   animation-delay: calc(var(--stagger) * 0.1s);
 }
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}

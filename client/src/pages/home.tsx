@@ -39,9 +39,9 @@ export default function Home() {
                   <span className="text-sm font-medium text-foreground">Authentic African Couture</span>
                 </div>
                 
-                <h1 className="text-6xl lg:text-8xl font-serif font-bold leading-none luxury-text" data-testid="text-hero-title">
+                <h1 className="text-6xl lg:text-8xl font-playfair font-bold leading-none luxury-text" data-testid="text-hero-title">
                   <span className="block text-foreground">Azani Africa</span>
-                  <span className="block text-gradient">Nairobi</span>
+                  <span className="block text-primary">Nairobi</span>
                 </h1>
                 
                 <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl font-light" data-testid="text-hero-description">
