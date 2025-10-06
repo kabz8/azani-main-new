@@ -41,7 +41,7 @@ export default function Home() {
                 </div>
                 
                 <h1 className="text-6xl lg:text-8xl font-serif font-bold leading-none luxury-text" data-testid="text-hero-title">
-                  <span className="block text-foreground">Azani</span>
+                  <span className="block text-foreground">Azani Africa</span>
                   <span className="block text-gradient">Nairobi</span>
                 </h1>
                 

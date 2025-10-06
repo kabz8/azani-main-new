@@ -2,6 +2,7 @@ import { Heart, Star } from "lucide-react";
 import { useState } from "react";
 import { useCurrency } from "@/hooks/use-currency";
 import { convertKESToUSD, formatPrice } from "@/lib/currency";
+import { getProductImage } from "@/lib/product-images";
 import type { Product } from "@shared/schema";
 
 interface ProductCardProps {
@@ -21,7 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Image Container */}
         <div className="relative aspect-[4/5] overflow-hidden">
           <img
-            src={product.images[0]}
+            src={getProductImage(product.images[0])}
             alt={product.name}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
             data-testid={`img-product-${product.id}`}
