@@ -41,8 +41,11 @@ export default function Home() {
                 
                 <h1 className="text-6xl lg:text-8xl font-playfair font-bold leading-none luxury-text" data-testid="text-hero-title">
                   <span className="block text-foreground">Azani Africa</span>
-                  <span className="block text-primary">Nairobi</span>
                 </h1>
+                
+                <p className="text-2xl lg:text-3xl text-primary font-semibold leading-relaxed max-w-xl" data-testid="text-hero-tagline">
+                  We customize outfits with a touch of ankara
+                </p>
                 
                 <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl font-light" data-testid="text-hero-description">
                   Where traditional African artistry meets contemporary luxury. Each piece tells a story of heritage, crafted with precision in the heart of Kenya.
