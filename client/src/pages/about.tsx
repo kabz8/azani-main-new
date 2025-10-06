@@ -1,4 +1,5 @@
 import { Award, Leaf, Users, Globe } from "lucide-react";
+import { aboutImages } from "@/lib/product-images";
 
 export default function About() {
   return (
@@ -38,7 +39,7 @@ export default function About() {
             
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1558769132-cb1aea1c8e47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000"
+                src={aboutImages.workshop}
                 alt="Master tailor working with colorful African fabrics in Nairobi workshop"
                 className="rounded-2xl shadow-2xl w-full h-auto"
                 data-testid="img-workshop-story"
@@ -118,7 +119,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center space-y-4" data-testid="card-team-1">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                src={aboutImages.team}
                 alt="Master Tailor Samuel Kimani"
                 className="w-32 h-32 rounded-full object-cover mx-auto"
               />
@@ -131,7 +132,7 @@ export default function About() {
             
             <div className="text-center space-y-4" data-testid="card-team-2">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                src={aboutImages.team}
                 alt="Design Director Grace Wanjiku"
                 className="w-32 h-32 rounded-full object-cover mx-auto"
               />
@@ -144,7 +145,7 @@ export default function About() {
             
             <div className="text-center space-y-4" data-testid="card-team-3">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                src={aboutImages.team}
                 alt="Quality Manager Joseph Muthui"
                 className="w-32 h-32 rounded-full object-cover mx-auto"
               />

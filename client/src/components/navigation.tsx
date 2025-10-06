@@ -34,10 +34,7 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group" data-testid="link-home">
-            <div>
-              <h1 className="text-3xl font-serif font-bold text-gradient">Azani</h1>
-              <p className="text-xs text-muted-foreground -mt-1">Nairobi Couture</p>
-            </div>
+            <h1 className="text-3xl font-serif font-bold text-gradient">Azani</h1>
           </Link>
           
           {/* Desktop Navigation */}
