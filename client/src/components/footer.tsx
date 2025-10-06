@@ -80,15 +80,15 @@ export function Footer() {
             <div className="space-y-2 text-background/80">
               <p data-testid="text-footer-address">Westlands, Nairobi</p>
               <p data-testid="text-footer-country">Kenya, East Africa</p>
-              <p data-testid="text-footer-phone">+254 700 123 456</p>
-              <p data-testid="text-footer-email">info@azani.co.ke</p>
+              <p data-testid="text-footer-phone">+254 755 537 861</p>
+              <p data-testid="text-footer-email">hello@azaniafrica.com</p>
             </div>
           </div>
         </div>
         
         <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-background/60 text-sm" data-testid="text-footer-copyright">
-            &copy; 2024 Azani. All rights reserved.
+            &copy; 2025 Azani. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-background/60 hover:text-background text-sm smooth-hover" data-testid="link-footer-privacy">

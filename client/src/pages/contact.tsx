@@ -107,8 +107,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
                       <p className="text-muted-foreground">
-                        +254 700 123 456<br />
-                        +254 20 123 4567
+                        +254 755 537 861
                       </p>
                     </div>
                   </div>
@@ -120,8 +119,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
                       <p className="text-muted-foreground">
-                        info@azani.co.ke<br />
-                        orders@azani.co.ke
+                        hello@azaniafrica.com
                       </p>
                     </div>
                   </div>
