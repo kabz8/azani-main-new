@@ -38,7 +38,7 @@ export default function About() {
             
             <div className="relative">
               <img
-                src="https://pixabay.com/get/g67b5feb289386efc8217ebe4cafba993512b8b4c0a1b16c52c99c79ff1af4eb3668a1ec556be93faf1d44ac74719e05a0ed45c10e3d47c51f166372c5014223c_1280.jpg"
+                src="https://images.unsplash.com/photo-1558769132-cb1aea1c8e47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000"
                 alt="Master tailor working with colorful African fabrics in Nairobi workshop"
                 className="rounded-2xl shadow-2xl w-full h-auto"
                 data-testid="img-workshop-story"
@@ -131,7 +131,7 @@ export default function About() {
             
             <div className="text-center space-y-4" data-testid="card-team-2">
               <img
-                src="https://pixabay.com/get/gd715f922346c9d0d7e0463d52112fb9ac83dffcb85ed796e030198a8f40446fb8e5a9c850c206ff0bdad3c31ea722bd31b2d1db2b6a563e11afffda7df6d592b_1280.jpg"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
                 alt="Design Director Grace Wanjiku"
                 className="w-32 h-32 rounded-full object-cover mx-auto"
               />
