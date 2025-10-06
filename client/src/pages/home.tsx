@@ -3,8 +3,8 @@ import { Link } from "wouter";
 import { ArrowRight, Sparkles, Globe, Award, Users, ShoppingBag } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
+import { HeroCarousel } from "@/components/hero-carousel";
 import type { Product } from "@shared/schema";
-import heroImage from "@assets/WhatsApp Image 2025-09-06 at 23.36.35 (1)_1759747415275.jpeg";
 
 export default function Home() {
   const { data: products, isLoading } = useQuery<Product[]>({
@@ -82,14 +82,9 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Right Column - Hero Image */}
+            {/* Right Column - Hero Carousel */}
             <div className="relative">
-              <img
-                src={heroImage}
-                alt="Elegant African fashion model in traditional wear"
-                className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                data-testid="img-hero-model"
-              />
+              <HeroCarousel />
             </div>
           </div>
         </div>
