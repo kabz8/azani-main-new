@@ -146,32 +146,23 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors duration-300">
-                <Award className="w-10 h-10 text-primary" />
-              </div>
+            <div className="text-center space-y-4">
               <h3 className="text-2xl font-serif font-bold text-foreground">Handmade in Nairobi</h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <p className="text-muted-foreground leading-relaxed">
                 Every piece is cut and sewn by our tailors in our workshop
               </p>
             </div>
             
-            <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors duration-300">
-                <Sparkles className="w-10 h-10 text-primary" />
-              </div>
+            <div className="text-center space-y-4">
               <h3 className="text-2xl font-serif font-bold text-foreground">Real African Fabric</h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <p className="text-muted-foreground leading-relaxed">
                 Ankara, Kitenge, and other fabrics sourced from Kenya and West Africa
               </p>
             </div>
             
-            <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors duration-300">
-                <Users className="w-10 h-10 text-primary" />
-              </div>
+            <div className="text-center space-y-4">
               <h3 className="text-2xl font-serif font-bold text-foreground">Custom or Ready-Made</h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <p className="text-muted-foreground leading-relaxed">
                 Shop our collection or order something made just for you
               </p>
             </div>
