@@ -19,7 +19,7 @@ export function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/custom-orders", label: "Custom Orders" },
-    { href: "/ready-shop", label: "Ready Shop" },
+    { href: "/ready-shop", label: "Shop" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
