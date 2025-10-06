@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useCurrency } from "@/hooks/use-currency";
 import { convertKESToUSD, formatPrice } from "@/lib/currency";
 import { getProductImage } from "@/lib/product-images";
+import { ProductDetailDialog } from "@/components/product-detail-dialog";
 import type { Product } from "@shared/schema";
 
 interface ProductCardProps {
@@ -11,6 +12,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const [isFavorited, setIsFavorited] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
   const { currency } = useCurrency();
 
   const price = currency === 'USD' ? convertKESToUSD(product.priceKES) : product.priceKES;
@@ -54,7 +56,11 @@ export function ProductCard({ product }: ProductCardProps) {
           
           {/* Quick View Button - Appears on Hover */}
           <div className="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
-            <button className="w-full bg-white text-foreground py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 backdrop-blur-sm">
+            <button 
+              onClick={() => setShowDialog(true)}
+              className="w-full bg-white text-foreground py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 backdrop-blur-sm"
+              data-testid={`button-quickview-${product.id}`}
+            >
               Quick View
             </button>
           </div>
@@ -119,6 +125,12 @@ export function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
       </div>
+      
+      <ProductDetailDialog 
+        product={product} 
+        open={showDialog} 
+        onOpenChange={setShowDialog}
+      />
     </div>
   );
 }
