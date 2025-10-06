@@ -91,19 +91,6 @@ export default function Home() {
                   className="relative rounded-3xl shadow-2xl w-full h-auto object-cover luxury-hover"
                   data-testid="img-hero-model"
                 />
-                
-                {/* Floating Badge */}
-                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-white/20 floating-card">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                      <Globe className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-foreground" data-testid="text-location-city">Nairobi, Kenya</div>
-                      <div className="text-sm text-muted-foreground">Worldwide Delivery</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
