@@ -84,15 +84,12 @@ export default function Home() {
             
             {/* Right Column - Hero Image */}
             <div className="relative">
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
-                <img
-                  src={heroImage}
-                  alt="Elegant African fashion model in traditional wear"
-                  className="relative rounded-3xl shadow-2xl w-full h-auto object-cover luxury-hover"
-                  data-testid="img-hero-model"
-                />
-              </div>
+              <img
+                src={heroImage}
+                alt="Elegant African fashion model in traditional wear"
+                className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                data-testid="img-hero-model"
+              />
             </div>
           </div>
         </div>

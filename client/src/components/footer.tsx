@@ -78,8 +78,8 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-background mb-4">Contact</h4>
             <div className="space-y-2 text-background/80">
-              <p data-testid="text-footer-address">Westlands, Nairobi</p>
-              <p data-testid="text-footer-country">Kenya, East Africa</p>
+              <p data-testid="text-footer-address">Lumumba Drive Roysambu</p>
+              <p data-testid="text-footer-country">Nairobi, Kenya</p>
               <p data-testid="text-footer-phone">+254 755 537 861</p>
               <p data-testid="text-footer-email">hello@azaniafrica.com</p>
             </div>

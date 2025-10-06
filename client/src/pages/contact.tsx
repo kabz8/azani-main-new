@@ -94,8 +94,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Visit Our Studio</h3>
                       <p className="text-muted-foreground">
-                        Westlands, Nairobi<br />
-                        Kenya, East Africa
+                        Lumumba Drive Roysambu<br />
+                        Nairobi, Kenya
                       </p>
                     </div>
                   </div>
