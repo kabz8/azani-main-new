@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { ArrowRight, Sparkles, Globe, Award, Users, ShoppingBag } from "lucide-react";
+import { ArrowRight, Sparkles, Globe, Award, Users, ShoppingBag, Scissors, Shirt, Ruler } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { HeroCarousel } from "@/components/hero-carousel";
@@ -138,6 +138,11 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center space-y-4">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center">
+                  <Scissors className="w-7 h-7 text-primary" />
+                </div>
+              </div>
               <h3 className="text-2xl font-serif font-bold text-foreground">Handmade in Nairobi</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Every piece is cut and sewn by our tailors in our workshop
@@ -145,6 +150,11 @@ export default function Home() {
             </div>
             
             <div className="text-center space-y-4">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center">
+                  <Shirt className="w-7 h-7 text-primary" />
+                </div>
+              </div>
               <h3 className="text-2xl font-serif font-bold text-foreground">Real African Fabric</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Ankara, Kitenge, and other fabrics sourced from Kenya and West Africa
@@ -152,6 +162,11 @@ export default function Home() {
             </div>
             
             <div className="text-center space-y-4">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center">
+                  <Ruler className="w-7 h-7 text-primary" />
+                </div>
+              </div>
               <h3 className="text-2xl font-serif font-bold text-foreground">Custom or Ready-Made</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Shop our collection or order something made just for you
