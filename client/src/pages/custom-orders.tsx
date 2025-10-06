@@ -79,54 +79,54 @@ export default function CustomOrders() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-muted to-background" data-testid="section-custom-hero">
+      <section className="pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-20 bg-gradient-to-b from-muted to-background" data-testid="section-custom-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-serif font-bold text-foreground mb-6" data-testid="text-custom-title">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4 sm:mb-6" data-testid="text-custom-title">
             Custom Tailoring
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-custom-description">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-custom-description">
             Every piece is crafted specifically for you. Our master tailors in Nairobi combine traditional techniques with modern precision to create clothing that fits perfectly and reflects your personal style.
           </p>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-card" data-testid="section-process">
+      <section className="py-12 sm:py-16 bg-card" data-testid="section-process">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
-                <Ruler className="h-7 w-7 text-primary" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            <div className="text-center space-y-3 sm:space-y-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
+                <Ruler className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground" data-testid="text-process-measurements">Precise Measurements</h3>
-              <p className="text-muted-foreground">Detailed measurement guide ensures perfect fit every time</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground px-2" data-testid="text-process-measurements">Precise Measurements</h3>
+              <p className="text-sm sm:text-base text-muted-foreground px-2">Detailed measurement guide ensures perfect fit every time</p>
             </div>
             
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
-                <Palette className="h-7 w-7 text-primary" />
+            <div className="text-center space-y-3 sm:space-y-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
+                <Palette className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground" data-testid="text-process-fabric">Fabric Selection</h3>
-              <p className="text-muted-foreground">Choose from premium African prints and luxury materials</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground px-2" data-testid="text-process-fabric">Fabric Selection</h3>
+              <p className="text-sm sm:text-base text-muted-foreground px-2">Choose from premium African prints and luxury materials</p>
             </div>
             
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
-                <Truck className="h-7 w-7 text-primary" />
+            <div className="text-center space-y-3 sm:space-y-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 border-2 border-primary rounded-full flex items-center justify-center mx-auto">
+                <Truck className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground" data-testid="text-process-delivery">Global Delivery</h3>
-              <p className="text-muted-foreground">Worldwide shipping with tracking and insurance</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground px-2" data-testid="text-process-delivery">Global Delivery</h3>
+              <p className="text-sm sm:text-base text-muted-foreground px-2">Worldwide shipping with tracking and insurance</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Order Form Section */}
-      <section className="py-20 bg-background" data-testid="section-order-form">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background" data-testid="section-order-form">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card>
             <CardHeader>
-              <CardTitle className="text-3xl font-serif" data-testid="text-form-title">Start Your Custom Order</CardTitle>
+              <CardTitle className="text-2xl sm:text-3xl font-serif" data-testid="text-form-title">Start Your Custom Order</CardTitle>
             </CardHeader>
             <CardContent>
               <Form {...form}>
@@ -302,7 +302,7 @@ export default function CustomOrders() {
 
                   <Button
                     type="submit"
-                    className="w-full py-6 text-lg"
+                    className="w-full py-5 sm:py-6 text-base sm:text-lg touch-manipulation"
                     disabled={isSubmitting}
                     data-testid="button-submit-order"
                   >
