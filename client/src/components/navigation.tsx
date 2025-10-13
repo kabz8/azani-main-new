@@ -98,36 +98,38 @@ export function Navigation() {
               </button>
               
               {shopMenuOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[700px] bg-white rounded-2xl shadow-2xl border border-border/10 p-8">
-                  <div className="grid grid-cols-3 gap-8">
-                    {Object.entries(shopCategories).map(([category, items]) => (
-                      <div key={category}>
-                        <h3 className="font-semibold text-foreground mb-4 pb-2 border-b border-border/20">{category}</h3>
-                        <div className="space-y-2.5">
-                          {items.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
-                              data-testid={`link-shop-${item.name.toLowerCase().replace(/ /g, '-')}`}
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[700px]">
+                  <div className="bg-white rounded-2xl shadow-2xl border border-border/10 p-8">
+                    <div className="grid grid-cols-3 gap-8">
+                      {Object.entries(shopCategories).map(([category, items]) => (
+                        <div key={category}>
+                          <h3 className="font-semibold text-foreground mb-4 pb-2 border-b border-border/20">{category}</h3>
+                          <div className="space-y-2.5">
+                            {items.map((item) => (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
+                                data-testid={`link-shop-${item.name.toLowerCase().replace(/ /g, '-')}`}
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="mt-8 pt-6 border-t border-border/20">
-                    <Link 
-                      href="/shop/ankara-bags"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary/70 hover:text-primary transition-colors"
-                      data-testid="link-shop-ankara-bags"
-                    >
-                      <span>Ankara Bags</span>
-                      <span className="text-xs px-3 py-1 bg-primary/10 rounded-full">Coming Soon</span>
-                    </Link>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-8 pt-6 border-t border-border/20">
+                      <Link 
+                        href="/shop/ankara-bags"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary/70 hover:text-primary transition-colors"
+                        data-testid="link-shop-ankara-bags"
+                      >
+                        <span>Ankara Bags</span>
+                        <span className="text-xs px-3 py-1 bg-primary/10 rounded-full">Coming Soon</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
