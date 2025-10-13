@@ -215,19 +215,6 @@ export function Navigation() {
                 </Link>
               </div>
             </div>
-            
-            {/* Mobile CTA */}
-            <div className="pt-4 border-t border-border/50">
-              <Link href="/custom-orders">
-                <button 
-                  className="w-full bg-primary text-primary-foreground py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
-                  onClick={() => setMobileMenuOpen(false)}
-                  data-testid="button-mobile-custom-order"
-                >
-                  Start Custom Order
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
       </div>
