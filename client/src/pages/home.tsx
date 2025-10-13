@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Completely Redesigned */}
-      <section className="relative pt-24 pb-12 md:pt-28 md:pb-16" data-testid="section-hero">
+      <section className="relative pt-8 pb-12 md:pt-28 md:pb-16" data-testid="section-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
