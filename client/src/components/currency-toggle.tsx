@@ -4,10 +4,10 @@ export function CurrencyToggle() {
   const { currency, setCurrency } = useCurrency();
 
   return (
-    <div className="flex items-center bg-muted rounded-full p-1 currency-toggle">
+    <div className="flex items-center bg-muted rounded-full p-0.5 currency-toggle">
       <button
         onClick={() => setCurrency('KES')}
-        className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+        className={`px-2 py-0.5 rounded-full text-xs font-medium transition-colors ${
           currency === 'KES'
             ? 'bg-primary text-primary-foreground'
             : 'text-muted-foreground hover:text-foreground'
@@ -18,7 +18,7 @@ export function CurrencyToggle() {
       </button>
       <button
         onClick={() => setCurrency('USD')}
-        className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+        className={`px-2 py-0.5 rounded-full text-xs font-medium transition-colors ${
           currency === 'USD'
             ? 'bg-primary text-primary-foreground'
             : 'text-muted-foreground hover:text-foreground'
