@@ -50,7 +50,7 @@ export function HeroCarousel() {
               <img
                 src={slide}
                 alt={`African fashion ${index + 1}`}
-                className="w-full h-[450px] md:h-[550px] object-contain object-top bg-muted"
+                className="w-full h-[450px] md:h-[550px] object-contain object-center md:object-right-top bg-muted"
               />
             </div>
           ))}
