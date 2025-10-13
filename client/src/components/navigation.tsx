@@ -76,14 +76,14 @@ export function Navigation() {
               </Link>
             ))}
             
-            {/* Shop Dropdown */}
+            {/* Shop Megamenu */}
             <div 
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setShopMenuOpen(true)}
               onMouseLeave={() => setShopMenuOpen(false)}
             >
               <button
-                className={`font-medium transition-all duration-300 ${
+                className={`relative font-medium transition-all duration-300 flex items-center gap-1 ${
                   location.startsWith('/shop')
                     ? 'text-primary'
                     : 'text-foreground hover:text-primary'
@@ -91,20 +91,24 @@ export function Navigation() {
                 data-testid="button-nav-shop"
               >
                 Shop
+                <ChevronDown className="h-4 w-4" />
+                {location.startsWith('/shop') && (
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></div>
+                )}
               </button>
               
               {shopMenuOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-xl shadow-2xl border border-border/20 p-6">
-                  <div className="grid grid-cols-3 gap-6">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[700px] bg-white rounded-2xl shadow-2xl border border-border/10 p-8">
+                  <div className="grid grid-cols-3 gap-8">
                     {Object.entries(shopCategories).map(([category, items]) => (
                       <div key={category}>
-                        <h3 className="font-semibold text-sm text-foreground mb-3">{category}</h3>
-                        <div className="space-y-2">
+                        <h3 className="font-semibold text-foreground mb-4 pb-2 border-b border-border/20">{category}</h3>
+                        <div className="space-y-2.5">
                           {items.map((item) => (
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                              className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
                               data-testid={`link-shop-${item.name.toLowerCase().replace(/ /g, '-')}`}
                             >
                               {item.name}
@@ -115,14 +119,14 @@ export function Navigation() {
                     ))}
                   </div>
                   
-                  <div className="mt-6 pt-6 border-t border-border/20">
+                  <div className="mt-8 pt-6 border-t border-border/20">
                     <Link 
                       href="/shop/ankara-bags"
-                      className="text-sm font-medium text-primary/60 hover:text-primary transition-colors flex items-center gap-2"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary/70 hover:text-primary transition-colors"
                       data-testid="link-shop-ankara-bags"
                     >
                       <span>Ankara Bags</span>
-                      <span className="text-xs px-2 py-1 bg-primary/10 rounded-full">Coming Soon</span>
+                      <span className="text-xs px-3 py-1 bg-primary/10 rounded-full">Coming Soon</span>
                     </Link>
                   </div>
                 </div>
