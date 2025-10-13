@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { CurrencyToggle } from "./currency-toggle";
-import { ShoppingBag, Menu, X, Search } from "lucide-react";
+import { ShoppingBag, Menu, X, Search, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function Navigation() {
@@ -8,6 +8,7 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [shopMenuOpen, setShopMenuOpen] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -183,44 +184,33 @@ export function Navigation() {
             ))}
             
             {/* Mobile Shop Categories */}
-            <Link
-              href="/shop/womens/tops"
-              className={`block text-lg font-medium transition-colors ${
-                location.includes('/shop/womens')
-                  ? 'text-primary'
-                  : 'text-foreground hover:text-primary'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-              data-testid="link-mobile-womens-wear"
-            >
-              Women's Wear
-            </Link>
-            
-            <Link
-              href="/shop/mens/shirts"
-              className={`block text-lg font-medium transition-colors ${
-                location.includes('/shop/mens')
-                  ? 'text-primary'
-                  : 'text-foreground hover:text-primary'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-              data-testid="link-mobile-mens-wear"
-            >
-              Men's Wear
-            </Link>
-            
-            <Link
-              href="/shop/kids/boys"
-              className={`block text-lg font-medium transition-colors ${
-                location.includes('/shop/kids')
-                  ? 'text-primary'
-                  : 'text-foreground hover:text-primary'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-              data-testid="link-mobile-kids-wear"
-            >
-              Kids Wear
-            </Link>
+            {Object.entries(shopCategories).map(([category, items]) => (
+              <div key={category}>
+                <button
+                  onClick={() => setExpandedCategory(expandedCategory === category ? null : category)}
+                  className="w-full flex items-center justify-between text-lg font-medium text-foreground hover:text-primary transition-colors"
+                  data-testid={`button-mobile-${category.toLowerCase().replace("'s ", '-')}`}
+                >
+                  <span>{category}</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform ${expandedCategory === category ? 'rotate-180' : ''}`} />
+                </button>
+                {expandedCategory === category && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {items.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block text-base text-muted-foreground hover:text-primary transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                        data-testid={`link-mobile-${item.name.toLowerCase().replace(/ /g, '-')}`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
             
             <Link
               href="/shop/ankara-bags"
