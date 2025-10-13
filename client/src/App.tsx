@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { CurrencyProvider } from "@/hooks/use-currency";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { WhatsAppFloat } from "@/components/whatsapp-float";
 import Home from "@/pages/home";
 import CustomOrders from "@/pages/custom-orders";
 import ReadyShop from "@/pages/ready-shop";
@@ -37,6 +38,7 @@ function App() {
               <Router />
             </main>
             <Footer />
+            <WhatsAppFloat />
           </div>
           <Toaster />
         </TooltipProvider>

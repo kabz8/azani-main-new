@@ -1,12 +1,13 @@
 import { Link, useLocation } from "wouter";
 import { CurrencyToggle } from "./currency-toggle";
-import { ShoppingBag, Menu, X, Sparkles } from "lucide-react";
+import { ShoppingBag, Menu, X, Search } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function Navigation() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [shopMenuOpen, setShopMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +20,27 @@ export function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/custom-orders", label: "Custom Orders" },
-    { href: "/ready-shop", label: "Shop" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
+  
+  const shopCategories = {
+    "Women's Wear": [
+      { name: "Tops", href: "/shop/womens/tops" },
+      { name: "Blazers", href: "/shop/womens/blazers" },
+      { name: "Skirts", href: "/shop/womens/skirts" },
+      { name: "Short Dresses", href: "/shop/womens/short-dresses" },
+      { name: "Maxi Dresses", href: "/shop/womens/maxi-dresses" },
+    ],
+    "Men's Wear": [
+      { name: "Shirts", href: "/shop/mens/shirts" },
+      { name: "Bomber Jackets", href: "/shop/mens/bomber-jackets" },
+    ],
+    "Kids Wear": [
+      { name: "Boys", href: "/shop/kids/boys" },
+      { name: "Girls", href: "/shop/kids/girls" },
+    ],
+  };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 border-b bg-white ${
@@ -56,10 +74,67 @@ export function Navigation() {
                 )}
               </Link>
             ))}
+            
+            {/* Shop Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setShopMenuOpen(true)}
+              onMouseLeave={() => setShopMenuOpen(false)}
+            >
+              <button
+                className={`font-medium transition-all duration-300 ${
+                  location.startsWith('/shop')
+                    ? 'text-primary'
+                    : 'text-foreground hover:text-primary'
+                }`}
+                data-testid="button-nav-shop"
+              >
+                Shop
+              </button>
+              
+              {shopMenuOpen && (
+                <div className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-xl shadow-2xl border border-border/20 p-6">
+                  <div className="grid grid-cols-3 gap-6">
+                    {Object.entries(shopCategories).map(([category, items]) => (
+                      <div key={category}>
+                        <h3 className="font-semibold text-sm text-foreground mb-3">{category}</h3>
+                        <div className="space-y-2">
+                          {items.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                              data-testid={`link-shop-${item.name.toLowerCase().replace(/ /g, '-')}`}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-6 pt-6 border-t border-border/20">
+                    <Link 
+                      href="/shop/ankara-bags"
+                      className="text-sm font-medium text-primary/60 hover:text-primary transition-colors flex items-center gap-2"
+                      data-testid="link-shop-ankara-bags"
+                    >
+                      <span>Ankara Bags</span>
+                      <span className="text-xs px-2 py-1 bg-primary/10 rounded-full">Coming Soon</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
           
-          {/* Right Side - Currency & Cart */}
-          <div className="flex items-center space-x-3 sm:space-x-6">
+          {/* Right Side - Search, Currency & Cart */}
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <button className="group p-2 touch-manipulation" data-testid="button-search">
+              <Search className="h-5 w-5 sm:h-6 sm:w-6 text-foreground group-hover:text-primary transition-colors" />
+            </button>
+            
             <CurrencyToggle />
             
             <button className="relative group p-2 touch-manipulation" data-testid="button-cart">
@@ -87,10 +162,10 @@ export function Navigation() {
         {/* Mobile Menu */}
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ${
           mobileMenuOpen 
-            ? 'max-h-96 opacity-100 mt-8' 
+            ? 'max-h-[600px] opacity-100 mt-8' 
             : 'max-h-0 opacity-0'
         }`}>
-          <div className="bg-white/95 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 space-y-6">
+          <div className="bg-white/95 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 space-y-4 max-h-[500px] overflow-y-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -107,12 +182,47 @@ export function Navigation() {
               </Link>
             ))}
             
+            {/* Mobile Shop Categories */}
+            <div className="space-y-3">
+              <div className="font-medium text-lg text-foreground">Shop</div>
+              {Object.entries(shopCategories).map(([category, items]) => (
+                <div key={category} className="ml-4">
+                  <div className="font-medium text-sm text-foreground/80 mb-2">{category}</div>
+                  <div className="ml-3 space-y-2">
+                    {items.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                        data-testid={`link-mobile-shop-${item.name.toLowerCase().replace(/ /g, '-')}`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              <div className="ml-4">
+                <Link 
+                  href="/shop/ankara-bags"
+                  className="text-sm font-medium text-primary/60 hover:text-primary transition-colors flex items-center gap-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                  data-testid="link-mobile-ankara-bags"
+                >
+                  <span>Ankara Bags</span>
+                  <span className="text-xs px-2 py-1 bg-primary/10 rounded-full">Coming Soon</span>
+                </Link>
+              </div>
+            </div>
+            
             {/* Mobile CTA */}
             <div className="pt-4 border-t border-border/50">
               <Link href="/custom-orders">
                 <button 
                   className="w-full bg-primary text-primary-foreground py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
                   onClick={() => setMobileMenuOpen(false)}
+                  data-testid="button-mobile-custom-order"
                 >
                   Start Custom Order
                 </button>
