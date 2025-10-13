@@ -186,14 +186,53 @@ export function Navigation() {
             <Link
               href="/shop/womens/tops"
               className={`block text-lg font-medium transition-colors ${
-                location.startsWith('/shop')
+                location.includes('/shop/womens')
                   ? 'text-primary'
                   : 'text-foreground hover:text-primary'
               }`}
               onClick={() => setMobileMenuOpen(false)}
-              data-testid="link-mobile-shop"
+              data-testid="link-mobile-womens-wear"
             >
-              Shop
+              Women's Wear
+            </Link>
+            
+            <Link
+              href="/shop/mens/shirts"
+              className={`block text-lg font-medium transition-colors ${
+                location.includes('/shop/mens')
+                  ? 'text-primary'
+                  : 'text-foreground hover:text-primary'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid="link-mobile-mens-wear"
+            >
+              Men's Wear
+            </Link>
+            
+            <Link
+              href="/shop/kids/boys"
+              className={`block text-lg font-medium transition-colors ${
+                location.includes('/shop/kids')
+                  ? 'text-primary'
+                  : 'text-foreground hover:text-primary'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid="link-mobile-kids-wear"
+            >
+              Kids Wear
+            </Link>
+            
+            <Link
+              href="/shop/ankara-bags"
+              className={`block text-lg font-medium transition-colors ${
+                location === '/shop/ankara-bags'
+                  ? 'text-primary'
+                  : 'text-foreground hover:text-primary'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid="link-mobile-ankara-bags"
+            >
+              Ankara Bags
             </Link>
           </div>
         </div>
