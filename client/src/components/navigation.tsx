@@ -183,38 +183,18 @@ export function Navigation() {
             ))}
             
             {/* Mobile Shop Categories */}
-            <div className="space-y-3">
-              <div className="font-medium text-lg text-foreground">Shop</div>
-              {Object.entries(shopCategories).map(([category, items]) => (
-                <div key={category} className="ml-4">
-                  <div className="font-medium text-sm text-foreground/80 mb-2">{category}</div>
-                  <div className="ml-3 space-y-2">
-                    {items.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                        data-testid={`link-mobile-shop-${item.name.toLowerCase().replace(/ /g, '-')}`}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              <div className="ml-4">
-                <Link 
-                  href="/shop/ankara-bags"
-                  className="text-sm font-medium text-primary/60 hover:text-primary transition-colors flex items-center gap-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                  data-testid="link-mobile-ankara-bags"
-                >
-                  <span>Ankara Bags</span>
-                  <span className="text-xs px-2 py-1 bg-primary/10 rounded-full">Coming Soon</span>
-                </Link>
-              </div>
-            </div>
+            <Link
+              href="/shop/womens/tops"
+              className={`block text-lg font-medium transition-colors ${
+                location.startsWith('/shop')
+                  ? 'text-primary'
+                  : 'text-foreground hover:text-primary'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid="link-mobile-shop"
+            >
+              Shop
+            </Link>
           </div>
         </div>
       </div>
