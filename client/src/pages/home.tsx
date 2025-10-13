@@ -50,12 +50,12 @@ export default function Home() {
             </div>
             
             {/* Carousel - Order 2 on mobile, right column on desktop */}
-            <div className="relative order-2 w-full">
+            <div className="relative order-2 w-full lg:row-span-3">
               <HeroCarousel />
             </div>
 
-            {/* Buttons - Order 3 on mobile, left column on desktop */}
-            <div className="flex flex-col sm:flex-row gap-4 order-3 lg:order-1 w-full">
+            {/* Buttons - Order 3 on mobile, below title on desktop */}
+            <div className="flex flex-col sm:flex-row gap-4 order-3 lg:order-1 w-full lg:col-start-1">
               <Link href="/custom-orders" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 rounded-xl font-semibold text-base sm:text-lg shadow-xl luxury-hover" data-testid="button-hero-custom">
                   Start Custom Order
@@ -70,8 +70,8 @@ export default function Home() {
               </Link>
             </div>
             
-            {/* Stats - Order 4 on mobile, left column on desktop */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 sm:pt-8 border-t border-foreground/10 order-4 lg:order-1 w-full">
+            {/* Stats - Order 4 on mobile, below buttons on desktop */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 sm:pt-8 border-t border-foreground/10 order-4 lg:order-1 w-full lg:col-start-1">
               <div className="text-center space-y-1 sm:space-y-2">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary" data-testid="text-stat-pieces">500+</div>
                 <div className="text-xs sm:text-sm text-muted-foreground font-medium">Custom Pieces</div>
