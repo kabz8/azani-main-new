@@ -29,7 +29,7 @@ export default function Home() {
       {/* Hero Section - Completely Redesigned */}
       <section className="relative pt-8 pb-12 md:pt-28 md:pb-16" data-testid="section-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
             
             {/* Title and Description - Order 1 on mobile and desktop */}
             <div className="space-y-3 sm:space-y-6 lg:space-y-8 order-1 fade-in-up bg-white lg:bg-transparent px-6 py-6 lg:px-0 lg:py-0 rounded-2xl lg:rounded-none shadow-[0_10px_30px_-15px_rgba(0,0,0,0.15)] lg:shadow-none border border-primary/10 lg:border-0">
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
             
             {/* Carousel - Order 2 on mobile, right column on desktop */}
-            <div className="relative order-2 w-full lg:row-span-3">
+            <div className="relative order-2 w-full lg:row-span-3 lg:self-start">
               <HeroCarousel />
             </div>
 
