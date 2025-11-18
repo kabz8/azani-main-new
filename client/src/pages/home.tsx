@@ -7,11 +7,14 @@ import { HeroCarousel } from "@/components/hero-carousel";
 import type { Product } from "@shared/schema";
 
 export default function Home() {
-  const { data: products, isLoading } = useQuery<Product[]>({
+  const { data: products, isLoading, error } = useQuery<Product[]>({
     queryKey: ['/api/products'],
   });
 
-  const featuredProducts = products?.filter(p => p.featured === 'true').slice(0, 3) || [];
+  // Get featured products, or fallback to first 3 products if none are featured
+  const featuredProducts = products?.filter(p => p.featured === 'true').slice(0, 3) || 
+                          products?.slice(0, 3) || 
+                          [];
 
   if (isLoading) {
     return (
@@ -105,13 +108,20 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
-            {featuredProducts.map((product, index) => (
-              <div key={product.id} className="fade-in-up" style={{ '--stagger': index } as any}>
-                <ProductCard product={product} />
-              </div>
-            ))}
-          </div>
+          {featuredProducts.length === 0 ? (
+            <div className="text-center py-20">
+              <p className="text-lg text-muted-foreground">No featured products available at the moment.</p>
+              <p className="text-sm text-muted-foreground mt-2">Check back soon for new arrivals!</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+              {featuredProducts.map((product, index) => (
+                <div key={product.id} className="fade-in-up" style={{ '--stagger': index } as any}>
+                  <ProductCard product={product} />
+                </div>
+              ))}
+            </div>
+          )}
           
           <div className="text-center mt-12 sm:mt-16">
             <Link href="/ready-shop" className="inline-block w-full sm:w-auto">
