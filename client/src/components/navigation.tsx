@@ -24,7 +24,6 @@ export function Navigation() {
     { href: "/custom-orders", label: "Custom Orders" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
-    { href: "/admin", label: "Admin" },
   ];
   
   const shopCategories = {
